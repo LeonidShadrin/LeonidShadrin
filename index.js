@@ -24,6 +24,12 @@ async function init() {
         console.log(`{-${item.id}-}`, `No template found for: '${item.fullName}'`);
       }
     } else {
+      if (item.full.includes('ст.')){
+        item.full = item.full.replace('ст.', 'старший');
+      }
+      if (item.full.includes('мл.')){
+        item.full = item.full.replace('мл.', 'молодший');
+      }
       nakazTemplate = nakazTemplate.replace(`{-${item.id}-}`, item.full);
     }
   }
@@ -38,6 +44,12 @@ async function init() {
         console.log(`{-old-${item.id}-}`, `No template found for: '${item.fullName}'`);
       }
     } else {
+      if (item.full.includes('ст.')){
+        item.full = item.full.replace('ст.', 'старший');
+      }
+      if (item.full.includes('мл.')){
+        item.full = item.full.replace('мл.', 'молодший');
+      }
       nakazTemplate = nakazTemplate.replace(`{-old-${item.id}-}`, item.full);
     }
   }
