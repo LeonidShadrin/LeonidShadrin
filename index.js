@@ -5,7 +5,7 @@ async function init() {
 
   const templatesFromFile = await getFileData('./templates/templates.txt');
   const templates = templatesFromFile.trim().split('\n');
-  let nakazTemplate = await getFileData('./templates/nakaz-template.txt');
+  let nakazTemplate = await getFileData('./templates/nakaz-no4rota-dn.txt');
 
   const data = await getFileData('./table.txt');
   const parsed = parseData(data);
