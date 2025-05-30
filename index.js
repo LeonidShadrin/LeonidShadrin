@@ -18,7 +18,7 @@ function processTemplate(template, parsedData, templatesList, prefix = '') {
     } else {
       let fullName = item.full
         .replace('ст.', 'старший ')
-        .replace('мл.', 'молодший ');
+        .replace('мол.', 'молодший ');
 
       return output.replace(placeholder, fullName);
     }
