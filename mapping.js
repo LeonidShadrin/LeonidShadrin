@@ -29,7 +29,7 @@ export const mapping = {
 28: { search: false},	
 29: { search: true},	
 30: { search: true},	
-31: { search: false},	
+31: { search: true},	
 32: { search: false},	
 33: { search: false},	
 34: { search: false},	
