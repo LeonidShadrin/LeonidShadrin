@@ -27,15 +27,15 @@ function processTemplate(table, names) {
       const match = findByInitials(item, names);
       // const match = names.find(str => str.includes(item.surname));
       if (match) {
-        console.log(match);
+        mapping[item.id]?.signer ? signers.push(match) : weekSigners.push(match);
+        // console.log(match);
       } else {
         console.log(`===== No template found for: '${item.surname}'`);
       }
-      // return;
     }
   }
 
-  return;
+  return { signers, weekSigners };
 }
 
 async function init() {
@@ -48,10 +48,11 @@ async function init() {
     const names = namesStr.trim().split('\n');
 
     // Process current and previous data
-    const result = processTemplate(table, names);
+    const { signers, weekSigners } = processTemplate(table, names);
 
+    let result = 'Signers:\n' + signers.join('\n') + '\n\nWeek Signers:\n' + weekSigners.join('\n');
     // Write final file
-    // await writeFileData('./signers.txt', result);
+    await writeFileData('./signers.txt', result);
     console.log('Done.');
   } catch (err) {
     console.error('Error during execution:', err);
