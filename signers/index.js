@@ -1,5 +1,5 @@
-import { getFileData, writeFileData, parseData } from './utils.js';
-import { mapping } from './mapping.js';
+import { getFileData, writeFileData, parseData } from '../utils.js';
+import { mapping } from '../mapping.js';
 
 function findByInitials(item, names) {
   for (const name of names) {
@@ -40,11 +40,10 @@ function processTemplate(table, names) {
 
 async function init() {
   try {
-
-    const tableStr = await getFileData('./table.txt');
+    const tableStr = await getFileData('../table.txt');
     const table = parseData(tableStr);
     
-    const namesStr = await getFileData('./templates/name-templates.txt');
+    const namesStr = await getFileData('../templates/name-templates.txt');
     const names = namesStr.trim().split('\n');
 
     // Process current and previous data

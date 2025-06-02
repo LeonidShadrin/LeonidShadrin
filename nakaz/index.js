@@ -1,5 +1,5 @@
-import { getFileData, writeFileData, parseData } from './utils.js';
-import { mapping } from './mapping.js';
+import { getFileData, writeFileData, parseData } from '../utils.js';
+import { mapping } from '../mapping.js';
 
 // Utility function to process replacements in template
 function processTemplate(template, parsedData, templatesList, prefix = '') {
@@ -29,10 +29,10 @@ async function init() {
   try {
     // Load all needed files in parallel
     const [templatesStr, nakazTemplate, dataStr, dataPrevStr] = await Promise.all([
-      getFileData('./templates/templates.txt'),
-      getFileData('./templates/nakaz-special.txt'),
-      getFileData('./table.txt'),
-      getFileData('./table-prev.txt')
+      getFileData('../templates/templates.txt'),
+      getFileData('../templates/nakaz-special.txt'),
+      getFileData('../table.txt'),
+      getFileData('../table-prev.txt')
     ]);
 
     const templates = templatesStr.trim().split('\n');
