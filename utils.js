@@ -31,12 +31,17 @@ export function parseData(input) {
     for (const line of lines) {
         const match = line.replace(/[\t]/g, ' ').match(/^(\d+)\.\s+.*?(.*)\d+\s+(.*)/);
         const full = match[3].trim();
-        const fullName = full.split(' ').slice(-2)[0] + ' ' + full.split(' ').slice(-1)[0];
+        const surname = full.split(' ').slice(-2)[0];
+        const fullName = surname + ' ' + full.split(' ').slice(-1)[0];
+        const initials = full.split(' ').slice(-1)[0].split('.');
+   
         if (match) {
             result.push({
                 id: match[1],
                 full,
-                fullName
+                fullName,
+                surname,
+                initials
             });
         }
     }

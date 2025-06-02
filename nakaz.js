@@ -30,7 +30,7 @@ async function init() {
     // Load all needed files in parallel
     const [templatesStr, nakazTemplate, dataStr, dataPrevStr] = await Promise.all([
       getFileData('./templates/templates.txt'),
-      getFileData('./templates/nakaz-no4rota-dn.txt'),
+      getFileData('./templates/nakaz-special.txt'),
       getFileData('./table.txt'),
       getFileData('./table-prev.txt')
     ]);
