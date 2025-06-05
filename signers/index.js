@@ -4,13 +4,16 @@ import { mapping } from '../mapping.js';
 function findByInitials(item, names) {
   for (const name of names) {
     const initials = name.replace(/[\t]/g, ' ').trim().split(' ').slice(-3); // [ 'Пяста', 'Павло', 'Анатолійович' ]
-    // console.log(initials);
+    
+    const result = name.replace(/[\t]/g, ' ').trim().split(' ').slice(0, -3).join(' ')
+      + ' ' + initials[1] + ' ' + initials[0].toUpperCase() + ' ';
+    // console.log(result);
     
     if (initials[0] === item.surname ){
       // console.log(`Found: ${name} for ${item.surname}`);
       
       if (initials[1][0] === item.initials[0] && initials[2][0] === item.initials[1]) {
-        return name;
+        return result;
       } else {
         console.log(initials[1][0], item.initials[0], initials[2][0], item.initials[1]);
         
