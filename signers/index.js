@@ -15,7 +15,7 @@ function findByInitials(item, names) {
       if (initials[1][0] === item.initials[0] && initials[2][0] === item.initials[1]) {
         return result;
       } else {
-        console.log(initials[1][0], item.initials[0], initials[2][0], item.initials[1]);
+        console.log('same surname', initials[0] , `${initials[1][0]}.${initials[2][0]}.`, `${item.initials[0]}.${item.initials[1]}`);
         
       }
     }

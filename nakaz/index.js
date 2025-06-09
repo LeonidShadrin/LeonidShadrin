@@ -13,7 +13,7 @@ function processTemplate(template, parsedData, templatesList, prefix = '') {
         return output.replace(placeholder, match.trim());
       } else {
         console.log(placeholder, `No template found for: '${item.fullName}'`);
-        return output.replace(placeholder, '');
+        return output;
       }
     } else {
       let fullName = item.full
