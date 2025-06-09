@@ -7,7 +7,7 @@ function App() {
   
   return (
     <div style={{ padding: '20px' }}>
-      <h1>June 2025 Schedule</h1>
+      <h1>Schedule</h1>
       <ScheduleTable data={getTableData(7, 2025)} />
     </div>
   );

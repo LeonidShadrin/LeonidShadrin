@@ -1,6 +1,21 @@
 import { getDatesInMonth } from './getDates.js';
 
-const divisionsForAsist = ['ITV', 'VZNP', 'VMZ', 'NachSIZ']; //, 'NachProd'];
+const divisionsForAsist = ['ITV', 'VZNP', 'VMZ', 'NachSIZ', 'NachProd'];
+const onceAWeek = ['NachSIZ', 'NachProd'];
+
+function checkOnceAWeek (days, idx, division) {
+  if (onceAWeek.includes(division) && days[idx - 1] && days[idx - 1].divisions[division].asist) return true;
+  if (onceAWeek.includes(division) && days[idx - 2] && days[idx - 2].divisions[division].asist) return true;
+  if (onceAWeek.includes(division) && days[idx - 3] && days[idx - 3].divisions[division].asist) return true;
+  if (onceAWeek.includes(division) && days[idx - 4] && days[idx - 4].divisions[division].asist) return true;
+  if (onceAWeek.includes(division) && days[idx - 5] && days[idx - 5].divisions[division].asist) return true;
+
+  if (onceAWeek.includes(division) && days[idx + 1] && days[idx + 1].divisions[division].asist) return true;
+  if (onceAWeek.includes(division) && days[idx + 2] && days[idx + 2].divisions[division].asist) return true;
+  if (onceAWeek.includes(division) && days[idx + 3] && days[idx + 3].divisions[division].asist) return true;
+  if (onceAWeek.includes(division) && days[idx + 4] && days[idx + 4].divisions[division].asist) return true;
+  if (onceAWeek.includes(division) && days[idx + 5] && days[idx + 5].divisions[division].asist) return true;
+}
 
 export function getTableData (month, year){
   const days = getDatesInMonth(year, month).map(day => ({
@@ -39,10 +54,10 @@ export function getTableData (month, year){
   days[0].addItem('VMZ', 'asist');
   // ---\\
 
-  for (let round = 0; round < 6; round++) {
+  for (let round = 0; round < 7; round++) { // проставляем ЧЧ
     console.log(`Round ${round}`);
     
-    for (let idx = 0; idx < days.length; idx++) { // доставляем недостающие дежурства парк
+    for (let idx = 0; idx < days.length; idx++) {
       const day = days[idx];
       for (const division of divisionsForAsist) {
         if (!day.divisions[division].asist) {
@@ -50,35 +65,20 @@ export function getTableData (month, year){
           const dayHasAsist = divisionsForAsist.some(d => day.divisions[d].asist);
           if (dayHasAsist) continue;
 
-
-          
           if (days[idx - 1] && days[idx - 1].divisions[division].asist) continue;
           if (days[idx + 1] && days[idx + 1].divisions[division].asist) continue;
           if (round < 4 && days[idx - 2] && days[idx - 2].divisions[division].asist) continue;
           if (round < 4 && days[idx + 2] && days[idx + 2].divisions[division].asist) continue;
           if (round < 3 && days[idx - 3] && days[idx - 3].divisions[division].asist) continue;
+          if (round < 3 && days[idx + 3] && days[idx + 3].divisions[division].asist) continue;
           if (round < 2 && days[idx - 4] && days[idx - 4].divisions[division].asist) continue;
-          
+          if (round < 2 && days[idx + 4] && days[idx + 4].divisions[division].asist) continue;
 
-          // if (division === 'NachSIZ' && days[idx + 1] && days[idx + 1].divisions[division].asist) continue;
-          // if (division === 'NachSIZ' && days[idx + 2] && days[idx + 2].divisions[division].asist) continue;
-          if (division === 'NachSIZ' && days[idx - 1] && days[idx - 1].divisions[division].asist) continue;
-          if (division === 'NachSIZ' && days[idx - 2] && days[idx - 2].divisions[division].asist) continue;
-          if (division === 'NachSIZ' && days[idx - 3] && days[idx - 3].divisions[division].asist) continue;
-          if (division === 'NachSIZ' && days[idx - 4] && days[idx - 4].divisions[division].asist) continue;
-          if (division === 'NachSIZ' && days[idx - 5] && days[idx - 5].divisions[division].asist) continue;
-          if (division === 'NachSIZ' && days[idx - 6] && days[idx - 6].divisions[division].asist) continue;
-
-
-          if (division === 'NachSIZ' && days[idx - 1] && days[idx - 1].divisions[division].asist) continue;
-          if (division === 'NachSIZ' && days[idx - 2] && days[idx - 2].divisions[division].asist) continue;
-          if (division === 'NachSIZ' && days[idx - 3] && days[idx - 3].divisions[division].asist) continue;
-          if (division === 'NachSIZ' && days[idx - 4] && days[idx - 4].divisions[division].asist) continue;
-          if (division === 'NachSIZ' && days[idx - 5] && days[idx - 5].divisions[division].asist) continue;
-          if (division === 'NachSIZ' && days[idx - 6] && days[idx - 6].divisions[division].asist) continue;
-
+          if (checkOnceAWeek (days, idx, division)) continue;
 
           if (round < 1 && day.divisions[division].park) continue;
+
+          
           day.addItem(division, 'asist');
         }
       }

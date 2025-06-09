@@ -2,8 +2,8 @@ import React from 'react';
 
 // Helper function to get background color for a cell
 const getCellBackgroundColor = (data) => {
-  if (data.asist && data.park) return 'green';
-  if (data.asist) return 'red';
+  if (data.asist && data.park) return 'darkgreen';
+  if (data.asist) return 'pink';
   if (data.park) return 'yellow';
   return 'white';
 };
