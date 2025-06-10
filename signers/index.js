@@ -1,5 +1,5 @@
 import { getFileData, writeFileData, parseData } from '../utils.js';
-import { mapping } from '../mapping.js';
+import { mapping } from '../mapping-VZNP-on-4.js';
 
 function findByInitials(item, names) {
   for (const name of names) {
