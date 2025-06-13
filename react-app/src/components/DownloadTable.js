@@ -5,18 +5,19 @@ import { saveAs } from 'file-saver'; // ✅ Corrected import
 // Helper function to get background color for a cell
 const getCellBackgroundColor = (data) => {
   if (data.asist && data.park) return 'darkgreen';
-  if (data.asist) return 'pink';
+  if (data.asist) return 'red';
   if (data.park) return 'yellow';
   return 'white';
 };
 
 // Map color names to hex codes
 const colorMap = {
-  pink: 'FFFFC0CB',
+  red: 'ff0000',
   yellow: 'FFFFFF00',
-  darkgreen: 'FF006400',
+  darkgreen: '33cc33',
   white: 'FFFFFFFF',
   orange: 'FFFFA500',
+  brown: '9c5c35',
   lightgray: 'FFF0F0F0'
 };
 
@@ -59,7 +60,7 @@ const DownloadTable = ({ data }) => {
     // Data rows
     categories.forEach(category => {
       const rowData = [categoriesMap[category]];
-      const colorData = [colorMap.white]; // category column default color
+      const colorData = [colorMap.brown]; // category column default color
 
       data.forEach(day => {
         const entry = day.divisions[category] || {};
@@ -76,17 +77,17 @@ const DownloadTable = ({ data }) => {
           pattern: 'solid',
           fgColor: { argb: bgColor }
         };
-        cell.alignment = { horizontal: 'center' };
+        cell.alignment = { horizontal: 'center', vertical: 'center' };
       });
     });
 
     // Auto-size columns
     worksheet.columns.forEach(column => {
-      let maxLength = 0;
-      column.eachCell({ includeEmpty: true }, (cell) => {
-        const columnLength = cell.value ? cell.value.toString().length : 10;
-        if (columnLength > maxLength) maxLength = columnLength;
-      });
+      // let maxLength = 0;
+      // column.eachCell({ includeEmpty: true }, (cell) => {
+      //   const columnLength = cell.value ? cell.value.toString().length : 10;
+      //   if (columnLength > maxLength) maxLength = columnLength;
+      // });
       column.width = 5; // maxLength < 10 ? 10 : maxLength > 30 ? 30 : maxLength;
     });
 

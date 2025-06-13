@@ -29,8 +29,12 @@ export function getTableData (month, year){
       NachKTP: { total: 0, park: false, asist: false },
     },
     addItem(division, item){
+      if (this.divisions[division][item]) return;
       this.divisions[division][item] = true;
       this.divisions[division].total ++;
+    },
+    addSoldier(division, total = 1) {
+      this.divisions[division].total += total;
     }
   }));
   
@@ -50,8 +54,8 @@ export function getTableData (month, year){
   }
 
   //--- добавляем дежурства на asist вручную, где\если это надо
-  days[1].addItem('VZNP', 'asist');
-  days[0].addItem('VMZ', 'asist');
+  days[0].addItem('VZNP', 'asist');
+  days[1].addItem('VMZ', 'asist');
   // ---\\
 
   for (let round = 0; round < 7; round++) { // проставляем ЧЧ
@@ -70,13 +74,13 @@ export function getTableData (month, year){
           if (round < 4 && days[idx - 2] && days[idx - 2].divisions[division].asist) continue;
           if (round < 4 && days[idx + 2] && days[idx + 2].divisions[division].asist) continue;
           if (round < 3 && days[idx - 3] && days[idx - 3].divisions[division].asist) continue;
-          if (round < 3 && days[idx + 3] && days[idx + 3].divisions[division].asist) continue;
-          if (round < 2 && days[idx - 4] && days[idx - 4].divisions[division].asist) continue;
-          if (round < 2 && days[idx + 4] && days[idx + 4].divisions[division].asist) continue;
+          // if (round < 3 && days[idx + 3] && days[idx + 3].divisions[division].asist) continue;
+          // if (round < 2 && days[idx - 4] && days[idx - 4].divisions[division].asist) continue;
+          // if (round < 2 && days[idx + 4] && days[idx + 4].divisions[division].asist) continue;
 
           if (checkOnceAWeek (days, idx, division)) continue;
 
-          if (round < 1 && day.divisions[division].park) continue;
+          if (division === 'ITV' && round < 1 && day.divisions[division].park) continue;
 
           
           day.addItem(division, 'asist');
@@ -84,7 +88,27 @@ export function getTableData (month, year){
       }
     }
   }
-  
+
+  // for (const day of days) {
+  //   const totalForDay = Object.values(day.divisions).reduce((acc, division) => acc + division.total, 0);
+  //   switch (totalForDay) {
+  //     case 4:
+  //       day.addSoldier('VZNP', 2);
+  //       day.addSoldier('VMZ', 1);
+  //       break;
+  //     case 5:
+  //         day.addSoldier('VZNP', );
+  //         // day.addSoldier('VMZ', 1);
+  //         break;
+  //     case 6:
+  //         day.addSoldier('VZNP', 1);
+  //         // day.addSoldier('VMZ', 1);
+  //         break;
+  //     default:
+  //       break;
+  //   }
+  // }
+
   return days;
 }
 

@@ -1,5 +1,5 @@
 import { getFileData, writeFileData, parseData } from '../utils.js';
-import { mapping } from '../mapping-VZNP-on-4.js';
+import { mapping } from '../mapping.js';
 
 // Utility function to process replacements in template
 function processTemplate(template, parsedData, templatesList, prefix = '') {
@@ -31,7 +31,7 @@ async function init() {
     // Load all needed files in parallel
     const [templatesStr, nakazTemplate, dataStr, dataPrevStr] = await Promise.all([
       getFileData('../templates/templates.txt'),
-      getFileData('../templates/nakaz-VZNP-on-4.txt'),
+      getFileData('../templates/nakaz-template.txt'),
       getFileData('../table.txt'),
       getFileData('../table-prev.txt')
     ]);
