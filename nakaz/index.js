@@ -1,5 +1,5 @@
 import { getFileData, writeFileData, parseData } from '../utils.js';
-import { mapping } from '../mapping.js';
+import { mapping } from '../mapping/mapping.js';
 
 // Utility function to process replacements in template
 function processTemplate(template, parsedData, templatesList, prefix = '') {
@@ -10,7 +10,8 @@ function processTemplate(template, parsedData, templatesList, prefix = '') {
     if (mapping[item.id]?.search) {
       const match = templatesList.find(str => str.includes(item.fullName));
       if (match) {
-        return output.replace(placeholder, match.trim());
+        return output.replace(placeholder, match.trim()
+          .split(item.fullName).join(item.fullName.toUpperCase()));
       } else {
         console.log(placeholder, `No template found for: '${item.fullName}'`);
         return output;
@@ -21,7 +22,7 @@ function processTemplate(template, parsedData, templatesList, prefix = '') {
         .replace('мол.', 'молодший ')
         .replace('гол.', 'головний ');
 
-      return output.replace(placeholder, fullName);
+      return output.replace(placeholder, fullName.split(item.surname).join(item.surname.toUpperCase()));
     }
   }, template);
 }
