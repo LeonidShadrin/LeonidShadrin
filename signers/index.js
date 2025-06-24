@@ -2,7 +2,7 @@ import { getFileData, writeFileData, parseData } from '../utils.js';
 import { mapping } from '../mapping/mapping.js';
 import { ranks } from '../mapping/ranks-mapping.js';
 
-const date = '20.06.2025';
+const date = '25.06.2025';
 
 function findByInitials(item, names) {
   for (const name of names) {
@@ -17,7 +17,8 @@ function findByInitials(item, names) {
       // console.log(`Found: ${name} for ${item.surname}`);
       
       if (initials[1][0] === item.initials[0] && initials[2][0] === item.initials[1]) {
-        return { match, rank: ranks[rank] };
+        return { match, rank: ranks[rank.replace(/\s+/g, '')] };
+        // return { match, rank: rank.replace(/\s+/g, '') };
       } else {
         console.log('same surname', initials[0] , `${initials[1][0]}.${initials[2][0]}.`, `${item.initials[0]}.${item.initials[1]}`);
         
@@ -32,7 +33,7 @@ function processTemplate(table, names) {
   for (const item of table) {
     if (mapping[item.id]?.signer || mapping[item.id]?.week_signer) {
       const result = findByInitials(item, names);
-      console.log(result.rank);
+      console.log({ t:result.rank});
       if (result.match) {
         signers.push(result)
         if (mapping[item.id]?.week_signer) {
