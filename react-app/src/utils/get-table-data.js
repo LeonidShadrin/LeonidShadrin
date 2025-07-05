@@ -1,9 +1,11 @@
 import { getDatesInMonth } from './getDates.js';
 
-const divisionsForAsist = ['ITV', 'VZNP', 'VMZ', 'NachSIZ', 'NachProd'];
+const divisionsForAsist = ['ITV', 'VZNP', 'VMZ', 'NachSIZ', 'NachProd']; // 'NachProd'
 const onceAWeek = ['NachSIZ', 'NachProd'];
 
 function checkOnceAWeek (days, idx, division) {
+  if (onceAWeek.includes(division) && days[idx].weekday === 'Sunday') return true;
+
   if (onceAWeek.includes(division) && days[idx - 1] && days[idx - 1].divisions[division].asist) return true;
   if (onceAWeek.includes(division) && days[idx - 2] && days[idx - 2].divisions[division].asist) return true;
   if (onceAWeek.includes(division) && days[idx - 3] && days[idx - 3].divisions[division].asist) return true;
@@ -22,7 +24,7 @@ export function getTableData (month, year){
     ...day,
     divisions: {
       ITV: { total: 3, park: false, asist: false},
-      VZNP: { total: 0, park: false, asist: false, p4: false },
+      VZNP: { total: 1, park: false, asist: false, p4: false },
       VMZ: { total: 0, park: false, asist: false },
       NachSIZ: { total: 0, park: false, asist: false },
       NachProd: { total: 0, park: false, asist: false },
