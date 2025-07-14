@@ -2,7 +2,7 @@ import { getFileData, writeFileData, parseData } from '../utils.js';
 import { mapping } from '../mapping/mapping.js';
 import { ranks } from '../mapping/ranks-mapping.js';
 
-const DATE = '05.07.2025';
+const DATE = '15.07.2025';
 
 function findByInitials(item, names) {
   for (const name of names) {
@@ -53,7 +53,7 @@ async function init() {
     const tableStr = await getFileData('../table.txt');
     const table = parseData(tableStr);
     
-    const namesStr = await getFileData('../templates/name-templates.txt');
+    const namesStr = await getFileData('../templates/signers-templates.txt');
     const names = namesStr.trim().split('\n');
 
     // Process current and previous data
