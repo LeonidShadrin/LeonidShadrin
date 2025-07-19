@@ -2,7 +2,7 @@ import { getFileData, writeFileData, parseData } from '../utils.js';
 import { mapping } from '../mapping/mapping.js';
 import { ranks } from '../mapping/ranks-mapping.js';
 
-const DATE = '18.07.2025';
+const DATE = '19.07.2025';
 
 function findByInitials(item, names) {
   for (const name of names) {
@@ -17,8 +17,9 @@ function findByInitials(item, names) {
       // console.log(`Found: ${name} for ${item.surname}`);
       
       if (initials[1][0] === item.initials[0] && initials[2][0] === item.initials[1]) {
+        // console.log( { match, rank: rank.replace(/\s+/g, '') }); // DEBUG
+        // return { match, rank: rank.replace(/\s+/g, '') }; // DEBUG
         return { match, rank: ranks[rank.replace(/\s+/g, '')] };
-        // return { match, rank: rank.replace(/\s+/g, '') };
       } else {
         console.log('same surname', initials[0] , `${initials[1][0]}.${initials[2][0]}.`, `${item.initials[0]}.${item.initials[1]}`);
         
@@ -33,6 +34,11 @@ function processTemplate(table, names) {
   for (const item of table) {
     if (mapping[item.id]?.signer || mapping[item.id]?.week_signer) {
       const result = findByInitials(item, names);
+      if  (!result) {
+        console.log(`===== No match found for: '${item.surname}'`);
+        continue;
+      }
+      //  console.log('result: ', result);
       console.log({ t:result.rank});
       if (result.match) {
         signers.push(result)
