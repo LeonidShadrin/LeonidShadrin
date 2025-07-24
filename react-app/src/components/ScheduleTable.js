@@ -36,7 +36,7 @@ const ScheduleTable = ({ data }) => {
                       : 'inherit',
                   fontWeight: 'bold',
                 }}
-              >
+              > 
                 {`${date.split('-')[2]}.${date.split('-')[1]}`} <br />
                 {/* <small>({weekday})</small> */}
               </th>
