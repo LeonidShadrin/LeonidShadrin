@@ -25,9 +25,12 @@ const categoriesMap = {
       ITV: 'ІТВ',
       VZNP: 'ВЗНП',
       VMZ: 'ВМЗ',
-      NachSIZ: 'Нач. СІЗ',
-      NachProd: 'Нач. Прод',
-      NachKTP: 'Нач. КТП',
+      SIZ: 'СІЗ',
+      Prod: 'Прод',
+      NachKTP: 'КТП',
+      VONP: 'ВОНП',
+      RAO: 'РАО'
+
     }
 
 const DownloadTable = ({ data }) => {

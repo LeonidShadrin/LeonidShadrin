@@ -2,7 +2,7 @@ import { getFileData, writeFileData, parseData } from '../utils.js';
 import { mapping } from '../mapping/mapping.js';
 import { ranks } from '../mapping/ranks-mapping.js';
 
-const DATE = '24.07.2025';
+const DATE = '16.08.2025';
 
 function findByInitials(item, names) {
   for (const name of names) {

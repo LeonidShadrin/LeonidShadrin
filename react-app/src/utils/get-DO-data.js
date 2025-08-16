@@ -1,23 +1,36 @@
 import { getDatesInMonth } from './getDates.js';
 
-const divisionsForPark = ['VZNP', 'VMZ' ];
+const surnames = [
+  "Рогак",
+  "Лисий",
+  "Горошко",
+  "Глущенко",
+  "Євтуховський",
+  "Пяста",
+  "Марецький",
+  "Бичкова",
+  "Бабинець",
+  "Нетрян",
+  "Янковський"
+];
+
+const divisionsForPark = ['VZNP', 'VMZ'];
 const onceAWeekPark = ['VONP'];
 const divisionsForAsist = ['ITV', 'VZNP', 'VMZ', 'SIZ', 'Prod']; // 'NachProd'
 const onceAWeekAsist = ['SIZ', 'Prod'];
 
-function checkOnceAWeekAsist (days, idx, division) {
+function checkOnceAWeekAsist(days, idx, division) {
   if (onceAWeekAsist.includes(division) && days[idx].weekday === 'Sunday') return true;
 
-   if(onceAWeekAsist.includes(division) && (() => {
-            for (let tmpIdx = 0; tmpIdx < 8; tmpIdx++) {
-              if ( days[idx - tmpIdx] && days[idx - tmpIdx].divisions[division].asist) return true;
-              if ( days[idx + tmpIdx] && days[idx + tmpIdx].divisions[division].asist) return true;
-            }
-          })() === true) return true;
-
+  if (onceAWeekAsist.includes(division) && (() => {
+    for (let tmpIdx = 0; tmpIdx < 8; tmpIdx++) {
+      if (days[idx - tmpIdx] && days[idx - tmpIdx].divisions[division].asist) return true;
+      if (days[idx + tmpIdx] && days[idx + tmpIdx].divisions[division].asist) return true;
+    }
+  })() === true) return true;
 }
 
-function checkOnceAWeekPark (days, idx, division) {
+function checkOnceAWeekPark(days, idx, division) {
   if (onceAWeekPark.includes(division) && days[idx].weekday === 'Sunday') return true;
   if (onceAWeekPark.includes(division) && days[idx].weekday === 'Saturday') return true;
 
@@ -35,31 +48,26 @@ function checkOnceAWeekPark (days, idx, division) {
   if (onceAWeekPark.includes(division) && days[idx + 4] && days[idx + 4].divisions[division].park) return true;
   if (onceAWeekPark.includes(division) && days[idx + 6] && days[idx + 6].divisions[division].park) return true;
   if (onceAWeekPark.includes(division) && days[idx + 7] && days[idx + 7].divisions[division].park) return true;
-}  
+}
 
-export function getTableData (month, year){
+export function getDutyOfficerData(month, year) {
   const days = getDatesInMonth(year, month).map(day => ({
     ...day,
     divisions: {
-      ITV: { total: 3, park: false, asist: false},
-      VZNP: { total: 1, park: false, asist: false, p4: false },
-      VMZ: { total: 0, park: false, asist: false },
-      SIZ: { total: 0, park: false, asist: false },
-      Prod: { total: 0, park: false, asist: false },
-      Avto: { total: 0, park: false, asist: false },
+      ITV: { total: 3, park: false, asist: false },
 
       // NachKTP: { total: 0, park: false, asist: false },
     },
-    addItem(division, item){
+    addItem(division, item) {
       if (this.divisions[division][item]) return;
       this.divisions[division][item] = true;
-      this.divisions[division].total ++;
-    },
+      this.divisions[division].total++;
+    },    
     addSoldier(division, total = 1) {
       this.divisions[division].total += total;
     }
   }));
-  
+
   // for (const day of days) { // проставляем известные дежурства на парк
   //   if(day.weekday === 'Monday' || day.weekday === 'Wednesday' || day.weekday === 'Friday') {
   //     day.addItem('VMZ', 'park');
@@ -77,7 +85,7 @@ export function getTableData (month, year){
 
   for (let round = 0; round < 7; round++) { // проставляем парк, там, где не проставили
     console.log(`Round ${round}`);
-    
+
     for (let idx = 0; idx < days.length; idx++) {
       const day = days[idx];
       for (const division of divisionsForPark) {
@@ -95,9 +103,9 @@ export function getTableData (month, year){
           // if (round < 2 && days[idx - 4] && days[idx - 4].divisions[division].park) continue;
           // if (round < 2 && days[idx + 4] && days[idx + 4].divisions[division].park) continue;
 
-          if (checkOnceAWeekPark (days, idx, division)) continue;
+          if (checkOnceAWeekPark(days, idx, division)) continue;
 
-          
+
           day.addItem(division, 'park');
         }
       }
@@ -109,10 +117,10 @@ export function getTableData (month, year){
   // days[1].addItem('VMZ', 'asist');
   // ---\\
 
-  
+
   for (let round = 0; round < 7; round++) { // проставляем ЧЧ
     console.log(`Round ${round}`);
-    
+
     for (let idx = 0; idx < days.length; idx++) {
       const day = days[idx];
       for (const division of divisionsForAsist) {
@@ -131,20 +139,20 @@ export function getTableData (month, year){
           // if (round < 2 && days[idx - 4] && days[idx - 4].divisions[division].asist) continue;
           // if (round < 2 && days[idx + 4] && days[idx + 4].divisions[division].asist) continue;
 
-          if ( ['ITV'].includes(division) && (() => {
+          if (['ITV'].includes(division) && (() => {
             for (let tmpIdx = 0; tmpIdx < 4; tmpIdx++) {
-              if ( days[idx - tmpIdx] && days[idx - tmpIdx].divisions[division].asist) return true;
-              if ( days[idx + tmpIdx] && days[idx + tmpIdx].divisions[division].asist) return true;
+              if (days[idx - tmpIdx] && days[idx - tmpIdx].divisions[division].asist) return true;
+              if (days[idx + tmpIdx] && days[idx + tmpIdx].divisions[division].asist) return true;
             }
           })() === true) continue;
           // if (['ITV'].includes(division) && days[idx - 5] && days[idx - 5].divisions[division].asist) continue;
           // if (['ITV'].includes(division) && days[idx + 5] && days[idx + 5].divisions[division].asist) continue;
 
-          if (checkOnceAWeekAsist (days, idx, division)) continue;
+          if (checkOnceAWeekAsist(days, idx, division)) continue;
 
           if (division === 'ITV' && round < 1 && day.divisions[division].park) continue;
 
-          
+
           day.addItem(division, 'asist');
         }
       }
