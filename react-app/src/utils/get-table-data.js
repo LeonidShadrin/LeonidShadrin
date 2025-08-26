@@ -2,7 +2,7 @@ import { getDatesInMonth } from './getDates.js';
 
 const divisionsForPark = ['VZNP', 'VMZ' ];
 const onceAWeekPark = ['VONP'];
-const divisionsForAsist = ['ITV', 'VZNP', 'VMZ', 'SIZ', 'Prod']; // 'NachProd'
+const divisionsForAsist = []; // ['VZNP', 'VMZ', 'SIZ', 'Prod']; // 'NachProd'
 const onceAWeekAsist = ['SIZ', 'Prod'];
 
 function checkOnceAWeekAsist (days, idx, division) {
@@ -43,7 +43,7 @@ export function getTableData (month, year){
     divisions: {
       ITV: { total: 3, park: false, asist: false},
       VZNP: { total: 1, park: false, asist: false, p4: false },
-      VMZ: { total: 0, park: false, asist: false },
+      VMZ: { total: 1, park: false, asist: false },
       SIZ: { total: 0, park: false, asist: false },
       Prod: { total: 0, park: false, asist: false },
       Avto: { total: 0, park: false, asist: false },
@@ -54,6 +54,10 @@ export function getTableData (month, year){
       if (this.divisions[division][item]) return;
       this.divisions[division][item] = true;
       this.divisions[division].total ++;
+    },
+    setOneAs(division, item){
+      if (this.divisions[division][item]) return;
+      this.divisions[division][item] = true;
     },
     addSoldier(division, total = 1) {
       this.divisions[division].total += total;
@@ -74,6 +78,12 @@ export function getTableData (month, year){
   //   //   day.addItem('ITV', 'park');
   //   // }
   // }
+
+  //--- добавляем дежурства на asist вручную, где\если это надо
+  // days[0].addItem('VZNP', 'asist');
+  // days[0].addItem('VMZ', 'park');
+  // ---\\
+
 
   for (let round = 0; round < 7; round++) { // проставляем парк, там, где не проставили
     console.log(`Round ${round}`);
@@ -104,10 +114,7 @@ export function getTableData (month, year){
     }
   }
 
-  //--- добавляем дежурства на asist вручную, где\если это надо
-  // days[0].addItem('VZNP', 'asist');
-  // days[1].addItem('VMZ', 'asist');
-  // ---\\
+
 
   
   for (let round = 0; round < 7; round++) { // проставляем ЧЧ

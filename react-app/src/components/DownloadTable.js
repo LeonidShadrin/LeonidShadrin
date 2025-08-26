@@ -29,7 +29,7 @@ const categoriesMap = {
       Prod: 'Прод',
       NachKTP: 'КТП',
       VONP: 'ВОНП',
-      RAO: 'РАО'
+      Avto: 'АС'
 
     }
 

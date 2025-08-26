@@ -5,7 +5,7 @@ import DownloadTable from '../components/DownloadTable';
 import { getTableData } from '../utils/get-table-data';
 
 function Divisions() {
-  const data = getTableData(8, 2025);
+  const data = getTableData(9, 2025);
   return (
     <div style={{ padding: '20px' }}>
           <h1>Schedule</h1>
