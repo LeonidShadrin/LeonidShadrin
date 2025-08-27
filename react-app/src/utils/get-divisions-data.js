@@ -42,8 +42,8 @@ export function getTableData (month, year){
     ...day,
     divisions: {
       ITV: { total: 3, park: false, asist: false},
-      VZNP: { total: 1, park: false, asist: false, p4: false },
-      VMZ: { total: 1, park: false, asist: false },
+      VZNP: { total: 2, park: false, asist: false, p4: false },
+      VMZ: { total: 2, park: false, asist: false },
       SIZ: { total: 0, park: false, asist: false },
       Prod: { total: 0, park: false, asist: false },
       Avto: { total: 0, park: false, asist: false },
@@ -59,8 +59,11 @@ export function getTableData (month, year){
       if (this.divisions[division][item]) return;
       this.divisions[division][item] = true;
     },
-    addSoldier(division, total = 1) {
-      this.divisions[division].total += total;
+    addSoldier(division, num = 1) {
+      this.divisions[division].total += num;
+    },
+    removeSoldier(division, num = 1) {
+      this.divisions[division].total -= num;
     }
   }));
   
@@ -108,7 +111,8 @@ export function getTableData (month, year){
           if (checkOnceAWeekPark (days, idx, division)) continue;
 
           
-          day.addItem(division, 'park');
+          day.setOneAs(division, 'park');
+          day.removeSoldier(division, 1);
         }
       }
     }

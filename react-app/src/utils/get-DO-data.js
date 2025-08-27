@@ -5,6 +5,7 @@ const surnames = [
   "Лисий",
   "Горошко",
   "Глущенко",
+  "Перепадя",
   "Євтуховський",
   "Пяста",
   "Марецький",
@@ -14,120 +15,70 @@ const surnames = [
   "Янковський"
 ];
 
-const divisionsForPark = ['VZNP', 'VMZ'];
-const onceAWeekPark = ['VONP'];
-const divisionsForAsist = ['ITV', 'VZNP', 'VMZ', 'SIZ', 'Prod']; // 'NachProd'
-const onceAWeekAsist = ['SIZ', 'Prod'];
 
-function checkOnceAWeekAsist(days, idx, division) {
-  if (onceAWeekAsist.includes(division) && days[idx].weekday === 'Sunday') return true;
+// const totals = surnames.reduce((acc, surname) => {
+//       acc[surname] = { total: 0 };
+//       return acc;
+//     }, {});
 
-  if (onceAWeekAsist.includes(division) && (() => {
-    for (let tmpIdx = 0; tmpIdx < 8; tmpIdx++) {
-      if (days[idx - tmpIdx] && days[idx - tmpIdx].divisions[division].asist) return true;
-      if (days[idx + tmpIdx] && days[idx + tmpIdx].divisions[division].asist) return true;
-    }
-  })() === true) return true;
-}
+export function getTableData(month, year) {
 
-function checkOnceAWeekPark(days, idx, division) {
-  if (onceAWeekPark.includes(division) && days[idx].weekday === 'Sunday') return true;
-  if (onceAWeekPark.includes(division) && days[idx].weekday === 'Saturday') return true;
+  const totals = {
+    "Рогак": { total: 0, max: 1 },
+    "Лисий": { total: 0, max: 4 },
+    "Горошко": { total: 0, max: 4 },
+    "Глущенко": { total: 0, max: 2 },
+    "Перепадя": { total: 0, max: 4 },
+    "Євтуховський": { total: 0, max: 3 },
+    "Пяста": { total: 0, max: 3 },
+    "Марецький": { total: 0, max: 3 },
+    "Бичкова": { total: 0, max: 2 },
+    "Бабинець": { total: 0, max: 2 },
+    "Янковський": { total: 0, max: 1 },
+    "Нетрян": { total: 0, max: 2 },
+  };
 
-  if (onceAWeekPark.includes(division) && days[idx - 1] && days[idx - 1].divisions[division].park) return true;
-  if (onceAWeekPark.includes(division) && days[idx - 2] && days[idx - 2].divisions[division].park) return true;
-  if (onceAWeekPark.includes(division) && days[idx - 3] && days[idx - 3].divisions[division].park) return true;
-  if (onceAWeekPark.includes(division) && days[idx - 4] && days[idx - 4].divisions[division].park) return true;
-  if (onceAWeekPark.includes(division) && days[idx - 5] && days[idx - 5].divisions[division].park) return true;
-  if (onceAWeekPark.includes(division) && days[idx - 6] && days[idx - 6].divisions[division].park) return true;
-  if (onceAWeekPark.includes(division) && days[idx - 7] && days[idx - 7].divisions[division].park) return true;
-
-  if (onceAWeekPark.includes(division) && days[idx + 1] && days[idx + 1].divisions[division].park) return true;
-  if (onceAWeekPark.includes(division) && days[idx + 2] && days[idx + 2].divisions[division].park) return true;
-  if (onceAWeekPark.includes(division) && days[idx + 3] && days[idx + 3].divisions[division].park) return true;
-  if (onceAWeekPark.includes(division) && days[idx + 4] && days[idx + 4].divisions[division].park) return true;
-  if (onceAWeekPark.includes(division) && days[idx + 6] && days[idx + 6].divisions[division].park) return true;
-  if (onceAWeekPark.includes(division) && days[idx + 7] && days[idx + 7].divisions[division].park) return true;
-}
-
-export function getDutyOfficerData(month, year) {
   const days = getDatesInMonth(year, month).map(day => ({
     ...day,
-    divisions: {
-      ITV: { total: 3, park: false, asist: false },
+    divisions: surnames.reduce((acc, surname) => {
+      acc[surname] = { asist: false };
+      return acc;
+    }, {}),
 
-      // NachKTP: { total: 0, park: false, asist: false },
-    },
-    addItem(division, item) {
+    setOne(division, item) {
       if (this.divisions[division][item]) return;
       this.divisions[division][item] = true;
-      this.divisions[division].total++;
-    },    
-    addSoldier(division, total = 1) {
-      this.divisions[division].total += total;
-    }
+    },
+    addAsist(division) {
+      
+      if (this.divisions[division]['asist']) return;
+      // this.setOne(division, 'asist');
+      this.divisions[division]['asist'] = true;
+      totals[division].total ++;
+      console.log('addAsist', division, totals[division], this.divisions);
+    },
   }));
 
-  // for (const day of days) { // проставляем известные дежурства на парк
-  //   if(day.weekday === 'Monday' || day.weekday === 'Wednesday' || day.weekday === 'Friday') {
-  //     day.addItem('VMZ', 'park');
-  //   }
-  //   if(day.weekday === 'Thursday' || day.weekday === 'Saturday') {
-  //     day.addItem('VZNP', 'park');
-  //   }
-  //   // if(day.weekday === 'Tuesday') {
-  //   //   day.addItem('NachKTP', 'park');
-  //   // }
-  //   // if(day.weekday === 'Sunday') {
-  //   //   day.addItem('ITV', 'park');
-  //   // }
-  // }
-
-  for (let round = 0; round < 7; round++) { // проставляем парк, там, где не проставили
-    console.log(`Round ${round}`);
-
-    for (let idx = 0; idx < days.length; idx++) {
-      const day = days[idx];
-      for (const division of divisionsForPark) {
-        if (!day.divisions[division].park) {
-          // --- each try ---
-          const dayHasPark = divisionsForPark.some(d => day.divisions[d].park);
-          if (dayHasPark) continue;
-
-          if (days[idx - 1] && days[idx - 1].divisions[division].park) continue;
-          if (days[idx + 1] && days[idx + 1].divisions[division].park) continue;
-          if (round < 4 && days[idx - 2] && days[idx - 2].divisions[division].park) continue;
-          if (round < 4 && days[idx + 2] && days[idx + 2].divisions[division].park) continue;
-          if (round < 3 && days[idx - 3] && days[idx - 3].divisions[division].park) continue;
-          // if (round < 3 && days[idx + 3] && days[idx + 3].divisions[division].park) continue;
-          // if (round < 2 && days[idx - 4] && days[idx - 4].divisions[division].park) continue;
-          // if (round < 2 && days[idx + 4] && days[idx + 4].divisions[division].park) continue;
-
-          if (checkOnceAWeekPark(days, idx, division)) continue;
-
-
-          day.addItem(division, 'park');
-        }
-      }
-    }
-  }
-
-  //--- добавляем дежурства на asist вручную, где\если это надо
-  // days[0].addItem('VZNP', 'asist');
-  // days[1].addItem('VMZ', 'asist');
+   //--- добавляем вручную
+  days[0].addAsist('Пяста');
+  days[1].addAsist('Глущенко');
+  days[2].addAsist('Євтуховський');
+  days[3].addAsist('Бичкова');
+  days[22].addAsist('Бичкова');
   // ---\\
 
-
   for (let round = 0; round < 7; round++) { // проставляем ЧЧ
-    console.log(`Round ${round}`);
+    console.log(`======================Round ${round}`);
 
     for (let idx = 0; idx < days.length; idx++) {
       const day = days[idx];
-      for (const division of divisionsForAsist) {
+      for (const division of surnames) {
         if (!day.divisions[division].asist) {
           // --- each try ---
-          const dayHasAsist = divisionsForAsist.some(d => day.divisions[d].asist);
+          const dayHasAsist = surnames.some(d => day.divisions[d].asist);
           if (dayHasAsist) continue;
+
+          if (totals[division].total >= totals[division].max) continue;
 
           if (days[idx - 1] && days[idx - 1].divisions[division].asist) continue;
           if (days[idx + 1] && days[idx + 1].divisions[division].asist) continue;
@@ -139,48 +90,30 @@ export function getDutyOfficerData(month, year) {
           // if (round < 2 && days[idx - 4] && days[idx - 4].divisions[division].asist) continue;
           // if (round < 2 && days[idx + 4] && days[idx + 4].divisions[division].asist) continue;
 
-          if (['ITV'].includes(division) && (() => {
-            for (let tmpIdx = 0; tmpIdx < 4; tmpIdx++) {
-              if (days[idx - tmpIdx] && days[idx - tmpIdx].divisions[division].asist) return true;
-              if (days[idx + tmpIdx] && days[idx + tmpIdx].divisions[division].asist) return true;
-            }
-          })() === true) continue;
-          // if (['ITV'].includes(division) && days[idx - 5] && days[idx - 5].divisions[division].asist) continue;
-          // if (['ITV'].includes(division) && days[idx + 5] && days[idx + 5].divisions[division].asist) continue;
+          // if (checkOnceAWeekAsist(days, idx, division)) continue;
 
-          if (checkOnceAWeekAsist(days, idx, division)) continue;
-
-          if (division === 'ITV' && round < 1 && day.divisions[division].park) continue;
-
-
-          day.addItem(division, 'asist');
+          day.addAsist(division);
         }
       }
     }
   }
-
-  // for (const day of days) {
-  //   const totalForDay = Object.values(day.divisions).reduce((acc, division) => acc + division.total, 0);
-  //   switch (totalForDay) {
-  //     case 4:
-  //       day.addSoldier('VZNP', 2);
-  //       day.addSoldier('VMZ', 1);
-  //       break;
-  //     case 5:
-  //         day.addSoldier('VZNP', );
-  //         // day.addSoldier('VMZ', 1);
-  //         break;
-  //     case 6:
-  //         day.addSoldier('VZNP', 1);
-  //         // day.addSoldier('VMZ', 1);
-  //         break;
-  //     default:
-  //       break;
-  //   }
-  // }
-
+  console.log({ totals } );
+  console.log({ days } );
   return days;
+  
 }
 
 
+
+// function checkOnceAWeekAsist(days, idx, division) {
+//   if (totals[division].total >= totals[division].max) return true;
+  
+//   if (surnames.includes(division) && (() => {
+//     for (let tmpIdx = 0; tmpIdx < 12; tmpIdx++) {
+//       if (days[idx - tmpIdx] && days[idx - tmpIdx].divisions[division].asist) return true;
+//       if (days[idx + tmpIdx] && days[idx + tmpIdx].divisions[division].asist) return true;
+//     }
+//   })() === true) return true;
+
+// }
 
