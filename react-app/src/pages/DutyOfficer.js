@@ -1,5 +1,6 @@
 import React from 'react';
 import DutyOfficerTable from '../components/DOTable';
+import DownloadDOTable from '../components/DownloadDOTable';
 import { getTableData } from '../utils/get-DO-data';
 
 function DutyOfficer() {
@@ -7,6 +8,7 @@ function DutyOfficer() {
   return (
     <div style={{ padding: '20px' }}>
       <h1>Черговий частини</h1>
+      <DownloadDOTable data={data} />
       <DutyOfficerTable data={data} />
     </div>
   );

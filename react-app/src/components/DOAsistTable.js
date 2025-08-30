@@ -3,12 +3,12 @@ import React from 'react';
 // Helper function to get background color for a cell
 const getCellBackgroundColor = (data) => {
   if (data.asist && data.park) return 'darkgreen';
-  if (data.asist) return 'violet';
+  if (data.asist) return 'pink';
   if (data.park) return 'yellow';
   return 'white';
 };
 
-const DutyOfficerTable = ({ data }) => {
+const DOAsistTable = ({ data }) => {
   if (!data || data.length === 0) return <p>No data available</p>;
 
   // Extract all keys except date and weekday
@@ -79,4 +79,4 @@ const DutyOfficerTable = ({ data }) => {
   );
 };
 
-export default DutyOfficerTable;
+export default DOAsistTable;
