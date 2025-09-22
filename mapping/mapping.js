@@ -14,7 +14,7 @@ export const mapping = {
   13: { search: false },
   14: { search: true, signer: true },
   15: { search: true },
-  16: { search: false },
+  16: { search: true },
   17: { search: false },
   18: { search: true, signer: true },
   19: { search: true },
