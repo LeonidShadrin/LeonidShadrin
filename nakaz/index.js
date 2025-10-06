@@ -6,7 +6,7 @@ function findByInitials(item, templates) {
   for (const template of templates) {
     const initials = template.replace(/[\t]/g, ' ').trim().split(' ').slice(-3); // [ 'Іванов', 'Іван', 'Іванович' ]
     
-    if (initials[0] === item.surname.toUpperCase() ){
+    if (initials[0] === item.surname.toUpperCase()){
       if (initials[1][0] === item.initials[0] && initials[2][0] === item.initials[1]) {
         return template;
       } else {
@@ -17,12 +17,26 @@ function findByInitials(item, templates) {
   }
 }
 
+function findBySurname(item, templates) {
+  for (const template of templates) {
+    const initials = template.replace(/[\t]/g, ' ').trim().split(' ').slice(-3); // [ 'Іванов', 'Іван', 'Іванович' ]
+    
+    if (initials[0] === item.surname.toUpperCase()){
+      console.log(`for ${item.surname} found: ${template}`);
+      return template;
+    }
+  }
+}
+
 // Utility function to process replacements in template
 function processTemplate(template, parsedData, templatesList, kursantsTemplatesList, prefix = '') {
   return parsedData.reduce((output, item) => {
     const key = `${prefix}${item.id}`;
     const placeholder = `{-${key}-}`;
 
+    if (item.surname === 'delete') {
+      return output.replace(placeholder, item.fullName.toUpperCase());
+    }
     if (mapping[item.id]?.search) {
       const match = findByInitials(item, templatesList);
       if (match) {
@@ -33,14 +47,15 @@ function processTemplate(template, parsedData, templatesList, kursantsTemplatesL
         return output;
       }
     } else {
-      const match = findByInitials(item, mapping[item.id]?.kursant ? kursantsTemplatesList : templatesList);
+      const templates = mapping[item.id]?.kursant ? kursantsTemplatesList : templatesList;
+      const match = mapping[item.id]?.kursant ? findByInitials(item, templates) : findByInitials(item, templates) || findBySurname(item, templates);
       if (match) {
         return output.replace(placeholder, 
           (mapping[item.id]?.kursant ? 'курсант навчального взводу навчальної роти військової частини А4631 ' : '')
           + match.trim()
           .split(item.fullName).join(item.fullName.toUpperCase()));
       } else {
-        console.log(placeholder, `Leaving as is: '${item.fullName}'`);
+        // console.log(placeholder, `Leaving as is: '${item.fullName}'`);
         let full = item.full
           .replace('ст.', 'старший ')
           .replace('мол.', 'молодший ')
@@ -72,7 +87,7 @@ async function init() {
 
     // Process current and previous data
     let result = processTemplate(nakazTemplate, parsed, templates, kursantsTemplates);
-    result = processTemplate(result, parsedPrev, templates, kursantsTemplates, 'old-');
+    // result = processTemplate(result, parsedPrev, templates, kursantsTemplates, 'old-');
 
     // Write final file
     await writeFileData('./nakaz.txt', result);
