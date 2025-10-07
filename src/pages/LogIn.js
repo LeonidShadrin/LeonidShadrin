@@ -1,5 +1,14 @@
 import React, { useState } from 'react';
 
+const generateHash = (string) => {
+  let hash = 0;
+  for (const char of string) {
+    hash = (hash << 5) - hash + char.charCodeAt(0);
+    hash |= 0; // Constrain to 32bit integer
+  }
+  return hash;
+};
+
 // Define the basic Login component
 function LogIn({setUserPsw}) {
   const [password, setPassword] = useState('');
@@ -7,8 +16,9 @@ function LogIn({setUserPsw}) {
   // Function to handle form submission
   const handleSubmit = (event) => {
     event.preventDefault();
-    localStorage.setItem('userPsw', password);
-    setUserPsw(password);
+    const hash = generateHash(password);
+    localStorage.setItem('userPsw', hash);
+    setUserPsw(hash);
   };
 
   return (

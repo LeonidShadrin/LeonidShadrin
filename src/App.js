@@ -11,10 +11,11 @@ import LogIn from './pages/LogIn';
 import './App.css';
 
 function App() {
-  const password = '4631';
+  const hashPsw = '1602656';
   const [userPsw, setUserPsw] = useState(localStorage.getItem('userPsw') || '');
   
-  if(userPsw !== password){
+  if(hashPsw !== userPsw.toString()){
+    
     return <LogIn setUserPsw={setUserPsw} />
   }
   
@@ -23,7 +24,7 @@ function App() {
       <div className="App">
         <Navbar />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<ChergChast />} />
           <Route path="/cherhovy-chastyny" element={<ChergChast />} />
           <Route path="/kitchen" element={<Kitchen />} />
           <Route path="/roty" element={<Roty />} />
