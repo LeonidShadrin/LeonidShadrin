@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/LeonidShadrin/static/css/main.c3800558.css",
-    "main.js": "/LeonidShadrin/static/js/main.c164d05c.js",
+    "main.css": "/LeonidShadrin/static/css/main.b3ec7629.css",
+    "main.js": "/LeonidShadrin/static/js/main.7103c474.js",
     "static/js/453.a5b4123c.chunk.js": "/LeonidShadrin/static/js/453.a5b4123c.chunk.js",
     "static/media/ChCh.png": "/LeonidShadrin/static/media/ChCh.2c06562dffe54ae3d82c.png",
     "static/media/Kitchen.png": "/LeonidShadrin/static/media/Kitchen.a69df7feec1d77ed30eb.png",
@@ -11,12 +11,12 @@
     "static/media/slick.ttf": "/LeonidShadrin/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/LeonidShadrin/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/LeonidShadrin/index.html",
-    "main.c3800558.css.map": "/LeonidShadrin/static/css/main.c3800558.css.map",
-    "main.c164d05c.js.map": "/LeonidShadrin/static/js/main.c164d05c.js.map",
+    "main.b3ec7629.css.map": "/LeonidShadrin/static/css/main.b3ec7629.css.map",
+    "main.7103c474.js.map": "/LeonidShadrin/static/js/main.7103c474.js.map",
     "453.a5b4123c.chunk.js.map": "/LeonidShadrin/static/js/453.a5b4123c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c3800558.css",
-    "static/js/main.c164d05c.js"
+    "static/css/main.b3ec7629.css",
+    "static/js/main.7103c474.js"
   ]
 }
