@@ -4,9 +4,9 @@ import KitchenImg from '../public/img/Kitchen.png';
 function Kitchen() {
   return (
     <div className="AboutUs">
-      <h1>Черговий частини</h1>
+      <h1>Черговий кухні</h1>
       <div>
-        <img  width={"90%"} src={KitchenImg} alt="promo" /> 
+        <img  width={"90%"} src={KitchenImg} alt="no_image" /> 
       </div>
     </div>
   );
