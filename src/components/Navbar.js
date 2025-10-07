@@ -6,9 +6,9 @@ function Navbar() {
     <nav className="Navbar">
       <ul>
         <li><Link to="/">Головна</Link></li>
-        <li><Link to="/about-us">Про нас</Link></li>
-        <li><Link to="/gallery">Галерея</Link></li>
-        <li><Link to="/news">Новини</Link></li>
+        <li><Link to="/cherhovy-chastyny">Черговий частини</Link></li>
+        <li><Link to="/kitchen">Їдальня</Link></li>
+        <li><Link to="/roty">Роти</Link></li>
       </ul>
     </nav>
   );

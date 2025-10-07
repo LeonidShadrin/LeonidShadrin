@@ -1,6 +1,7 @@
 {
   "name": "voen-chast",
   "version": "0.1.0",
+  "homepage": "https://LeonidShadrin.github.io/LeonidShadrin",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
