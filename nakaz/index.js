@@ -2,10 +2,12 @@ import { getFileData, writeFileData, parseData } from '../utils.js';
 import { getRandomName, getRandomFathersName } from '../getRandomNames.js';
 import { mapping } from '../mapping/mapping.js';
 
-function findByInitials(item, templates) {
+function findByInitials(item, templates, debug = false) {
+  // if (debug === true) console.log('findByInitials', templates.slice(-3));
   for (const template of templates) {
     const initials = template.replace(/[\t]/g, ' ').trim().split(' ').slice(-3); // [ 'Іванов', 'Іван', 'Іванович' ]
-    
+    // if (debug === true) console.log('initials', initials);
+
     if (initials[0] === item.surname.toUpperCase()){
       if (initials[1][0] === item.initials[0] && initials[2][0] === item.initials[1]) {
         return template;
@@ -38,7 +40,8 @@ function processTemplate(template, parsedData, templatesList, kursantsTemplatesL
       return output.replace(placeholder, item.fullName.toUpperCase());
     }
     if (mapping[item.id]?.search) {
-      const match = findByInitials(item, templatesList);
+      // console.log(templatesList.slice(-3));
+      const match = findByInitials(item, templatesList, true);
       if (match) {
         return output.replace(placeholder, match.trim()
           .split(item.fullName).join(item.fullName.toUpperCase()));
