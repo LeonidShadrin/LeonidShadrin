@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/Work-Army/Coding/voen-chast/build/static/css/main.c95c1f36.css",
-    "main.js": "/Work-Army/Coding/voen-chast/build/static/js/main.cce9abda.js",
-    "static/js/453.a5b4123c.chunk.js": "/Work-Army/Coding/voen-chast/build/static/js/453.a5b4123c.chunk.js",
-    "static/media/ChCh.png": "/Work-Army/Coding/voen-chast/build/static/media/ChCh.4cb2ffd565ef6d68156e.png",
-    "static/media/Kitchen.png": "/Work-Army/Coding/voen-chast/build/static/media/Kitchen.c06646064f0c14bff847.png",
-    "static/media/Roty.png": "/Work-Army/Coding/voen-chast/build/static/media/Roty.ad7ea378f8c6fab2fdb9.png",
-    "static/media/Divisions.png": "/Work-Army/Coding/voen-chast/build/static/media/Divisions.cd433a836ec870498cb2.png",
-    "static/media/slick.svg": "/Work-Army/Coding/voen-chast/build/static/media/slick.2630a3e3eab21c607e21.svg",
-    "static/media/slick.eot": "/Work-Army/Coding/voen-chast/build/static/media/slick.a4e97f5a2a64f0ab1323.eot",
-    "static/media/slick.ttf": "/Work-Army/Coding/voen-chast/build/static/media/slick.c94f7671dcc99dce43e2.ttf",
-    "static/media/slick.woff": "/Work-Army/Coding/voen-chast/build/static/media/slick.295183786cd8a1389865.woff",
-    "index.html": "/Work-Army/Coding/voen-chast/build/index.html",
-    "main.c95c1f36.css.map": "/Work-Army/Coding/voen-chast/build/static/css/main.c95c1f36.css.map",
-    "main.cce9abda.js.map": "/Work-Army/Coding/voen-chast/build/static/js/main.cce9abda.js.map",
-    "453.a5b4123c.chunk.js.map": "/Work-Army/Coding/voen-chast/build/static/js/453.a5b4123c.chunk.js.map"
+    "main.css": "/LeonidShadrin/static/css/main.b3ec7629.css",
+    "main.js": "/LeonidShadrin/static/js/main.07b7bfd0.js",
+    "static/js/453.a5b4123c.chunk.js": "/LeonidShadrin/static/js/453.a5b4123c.chunk.js",
+    "static/media/ChCh.png": "/LeonidShadrin/static/media/ChCh.4cb2ffd565ef6d68156e.png",
+    "static/media/Kitchen.png": "/LeonidShadrin/static/media/Kitchen.156757b4ad6367078cc8.png",
+    "static/media/Roty.png": "/LeonidShadrin/static/media/Roty.ad7ea378f8c6fab2fdb9.png",
+    "static/media/Divisions.png": "/LeonidShadrin/static/media/Divisions.cd433a836ec870498cb2.png",
+    "static/media/slick.svg": "/LeonidShadrin/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/LeonidShadrin/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/LeonidShadrin/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/LeonidShadrin/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/LeonidShadrin/index.html",
+    "main.b3ec7629.css.map": "/LeonidShadrin/static/css/main.b3ec7629.css.map",
+    "main.07b7bfd0.js.map": "/LeonidShadrin/static/js/main.07b7bfd0.js.map",
+    "453.a5b4123c.chunk.js.map": "/LeonidShadrin/static/js/453.a5b4123c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c95c1f36.css",
-    "static/js/main.cce9abda.js"
+    "static/css/main.b3ec7629.css",
+    "static/js/main.07b7bfd0.js"
   ]
 }
