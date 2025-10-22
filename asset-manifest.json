@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/LeonidShadrin/static/css/main.b3ec7629.css",
-    "main.js": "/LeonidShadrin/static/js/main.4aa99433.js",
+    "main.js": "/LeonidShadrin/static/js/main.620824b9.js",
     "static/js/453.a5b4123c.chunk.js": "/LeonidShadrin/static/js/453.a5b4123c.chunk.js",
     "static/media/ChCh.png": "/LeonidShadrin/static/media/ChCh.d954dc4db5c49d4d3914.png",
     "static/media/Roty.png": "/LeonidShadrin/static/media/Roty.0d4e47395629cebd40d8.png",
     "static/media/Kitchen.png": "/LeonidShadrin/static/media/Kitchen.ad7755afcbc59fb9e290.png",
-    "static/media/Divisions.png": "/LeonidShadrin/static/media/Divisions.cd433a836ec870498cb2.png",
+    "static/media/Divisions.png": "/LeonidShadrin/static/media/Divisions.9a1060868f58fcb8de70.png",
     "static/media/slick.svg": "/LeonidShadrin/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/LeonidShadrin/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/LeonidShadrin/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/LeonidShadrin/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/LeonidShadrin/index.html",
     "main.b3ec7629.css.map": "/LeonidShadrin/static/css/main.b3ec7629.css.map",
-    "main.4aa99433.js.map": "/LeonidShadrin/static/js/main.4aa99433.js.map",
+    "main.620824b9.js.map": "/LeonidShadrin/static/js/main.620824b9.js.map",
     "453.a5b4123c.chunk.js.map": "/LeonidShadrin/static/js/453.a5b4123c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b3ec7629.css",
-    "static/js/main.4aa99433.js"
+    "static/js/main.620824b9.js"
   ]
 }
