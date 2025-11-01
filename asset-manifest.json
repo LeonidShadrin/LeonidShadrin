@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/LeonidShadrin/static/css/main.b3ec7629.css",
-    "main.js": "/LeonidShadrin/static/js/main.3a5aed19.js",
+    "main.js": "/LeonidShadrin/static/js/main.98c7aa87.js",
     "static/js/453.a5b4123c.chunk.js": "/LeonidShadrin/static/js/453.a5b4123c.chunk.js",
-    "static/media/ChCh.png": "/LeonidShadrin/static/media/ChCh.51fdd8e0bc563d791a19.png",
-    "static/media/Roty.png": "/LeonidShadrin/static/media/Roty.0d4e47395629cebd40d8.png",
-    "static/media/Kitchen.png": "/LeonidShadrin/static/media/Kitchen.7127ba13856a53c70511.png",
-    "static/media/Divisions.png": "/LeonidShadrin/static/media/Divisions.6e478a11e378f6df05da.png",
+    "static/media/ChCh.png": "/LeonidShadrin/static/media/ChCh.fce124e0f9fca0cfa407.png",
+    "static/media/Roty.png": "/LeonidShadrin/static/media/Roty.6e9ab298ac20b92d6017.png",
+    "static/media/Kitchen.png": "/LeonidShadrin/static/media/Kitchen.47a30c6209abb8121960.png",
+    "static/media/Divisions.png": "/LeonidShadrin/static/media/Divisions.4de01b770f104148825b.png",
     "static/media/slick.svg": "/LeonidShadrin/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/LeonidShadrin/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/LeonidShadrin/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/LeonidShadrin/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/LeonidShadrin/index.html",
     "main.b3ec7629.css.map": "/LeonidShadrin/static/css/main.b3ec7629.css.map",
-    "main.3a5aed19.js.map": "/LeonidShadrin/static/js/main.3a5aed19.js.map",
+    "main.98c7aa87.js.map": "/LeonidShadrin/static/js/main.98c7aa87.js.map",
     "453.a5b4123c.chunk.js.map": "/LeonidShadrin/static/js/453.a5b4123c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b3ec7629.css",
-    "static/js/main.3a5aed19.js"
+    "static/js/main.98c7aa87.js"
   ]
 }
