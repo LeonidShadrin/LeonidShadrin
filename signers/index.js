@@ -2,7 +2,7 @@ import { getFileData, writeFileData, parseData } from '../utils.js';
 import { mapping } from '../mapping/mapping.js';
 import { ranks } from '../mapping/ranks-mapping.js';
 
-const DATE = '17.10.2025';
+const DATE = '27.11.2025';
 
 function findByInitials(item, names) {
   for (const name of names) {
@@ -12,8 +12,9 @@ function findByInitials(item, names) {
         .replace('мол.', 'молодший ')
         .replace('гол.', 'головний');
     const match = rank + '\t' + initials[1] + ' ' + initials[0].toUpperCase() + '\n' + DATE + '\n';
-    
-    if (initials[0] === item.surname ){
+    // if (item.surname === 'Кухтарук') console.log('initials', initials);
+
+    if (initials[0].toUpperCase() === item.surname.toUpperCase() ){
       // console.log(`Found: ${name} for ${item.surname}`);
       
       if (initials[1][0] === item.initials[0] && initials[2][0] === item.initials[1]) {
