@@ -1,5 +1,6 @@
 import fs from 'fs';
 
+
 export function getFileData(filePath) {
   return new Promise((resolve, reject) => {
     fs.readFile(filePath, 'utf8', (err, data) => {
@@ -26,11 +27,19 @@ export function writeFileData(filePath, data) {
 
 
 export function parseData(input) {
-    const lines = input.trim().split('\n');
+    const lines = input.trim().split('\n');    
     const result = [];
     for (const line of lines) {
-        const match = line.replace(/[\t]/g, ' ').match(/^(\d+)\.\s+.*?(.*)\d+\s+(.*)/);
-        const full = match[3].trim();
+      const match = line.trim().replace(/\t|\r/g, ' ').replace(/[\s]/g, ' ').match(/^(\d+)\.\s+.*?(.*)\d+\s+(.*)/);    
+      if(!match) continue;
+        let full;
+        try {
+          full = match[3].trim().replace(/\t|(\s{2,10})/g, ' ');
+        } catch (error) {
+          console.log([line]);
+          console.log(match);
+          throw error;
+        }    
         const surname = full.split(' ').slice(-2)[0];
         const fullName = surname + ' ' + full.split(' ').slice(-1)[0];
         const initials = full.split(' ').slice(-1)[0].split('.');

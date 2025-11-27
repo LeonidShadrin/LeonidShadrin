@@ -5,15 +5,28 @@ import { mapping } from '../mapping/mapping.js';
 function findByInitials(item, templates, debug = false) {
   // if (debug === true) console.log('findByInitials', templates.slice(-3));
   for (const template of templates) {
-    const initials = template.replace(/[\t]/g, ' ').trim().split(' ').slice(-3); // [ 'Іванов', 'Іван', 'Іванович' ]
+    if (item.id === 12) console.log(template);
+    
+    const initials = template.replace(/\t|(\s{2,10})/g, ' ').trim().split(' ').slice(-3); // [ 'Іванов', 'Іван', 'Іванович' ]
     // if (debug === true) console.log('initials', initials);
-
-    if (initials[0] === item.surname.toUpperCase()){
-      if (initials[1][0] === item.initials[0] && initials[2][0] === item.initials[1]) {
-        return template;
-      } else {
-        console.log('skiping same surname', initials[0] , `${initials[1][0]}.${initials[2][0]}.`, `${item.initials[0]}.${item.initials[1]}`);
+    // if (item.fullName === 'Сорочинський О.В.') console.log('initials', initials);
+    
+    if (initials[0].toUpperCase() === item.surname.toUpperCase()){
+      
+      try {
+        if (initials[1][0] === item.initials[0] && initials[2][0] === item.initials[1]) {
+          return template;
+        } else {
+          console.log('skiping same surname', initials[0] , `${initials[1][0]}.${initials[2][0]}.`, `${item.initials[0]}.${item.initials[1]}`);
+          
+        }
         
+      } catch (error) {
+        console.log(item);
+        console.log([template]);
+        console.log(initials);
+        
+        throw error;
       }
     }
   }
@@ -66,6 +79,7 @@ function processTemplate(template, parsedData, templatesList, kursantsTemplatesL
 
         return output.replace(placeholder, 
           (mapping[item.id]?.kursant ? 'курсант навчального взводу навчальної роти військової частини А4631 ' : '')
+          // + `${full.split(item.surname)[0]} ${item.surname.toUpperCase()} ${item.initials[0]}.${item.initials[1]}.`);SS
           + `${full.split(item.surname)[0]} ${item.surname.toUpperCase()} ${getRandomName(item.initials[0])} ${getRandomFathersName(item.initials[1])}`);
       }
     }

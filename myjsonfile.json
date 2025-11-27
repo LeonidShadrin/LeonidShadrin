@@ -1,1 +1,1052 @@
-[{"date":"2025-06-01","weekday":"Sunday","ITV":{"total":4,"park":true,"asist":false},"VZNP":{"total":0,"park":false,"asist":false,"p4":false},"VMZ":{"total":0,"park":false,"asist":false},"NachSIZ":{"total":0,"park":false,"asist":false},"NachProd":{"total":0,"park":false,"asist":false},"NachKTP":{"total":0,"park":false,"asist":false}},{"date":"2025-06-02","weekday":"Monday","ITV":{"total":3,"park":false,"asist":false},"VZNP":{"total":0,"park":false,"asist":false,"p4":false},"VMZ":{"total":1,"park":true,"asist":false},"NachSIZ":{"total":0,"park":false,"asist":false},"NachProd":{"total":0,"park":false,"asist":false},"NachKTP":{"total":0,"park":false,"asist":false}},{"date":"2025-06-03","weekday":"Tuesday","ITV":{"total":3,"park":false,"asist":false},"VZNP":{"total":0,"park":false,"asist":false,"p4":false},"VMZ":{"total":0,"park":false,"asist":false},"NachSIZ":{"total":0,"park":false,"asist":false},"NachProd":{"total":0,"park":false,"asist":false},"NachKTP":{"total":1,"park":true,"asist":false}},{"date":"2025-06-04","weekday":"Wednesday","ITV":{"total":3,"park":false,"asist":false},"VZNP":{"total":0,"park":false,"asist":false,"p4":false},"VMZ":{"total":1,"park":true,"asist":false},"NachSIZ":{"total":0,"park":false,"asist":false},"NachProd":{"total":0,"park":false,"asist":false},"NachKTP":{"total":0,"park":false,"asist":false}},{"date":"2025-06-05","weekday":"Thursday","ITV":{"total":3,"park":false,"asist":false},"VZNP":{"total":1,"park":true,"asist":false,"p4":false},"VMZ":{"total":0,"park":false,"asist":false},"NachSIZ":{"total":0,"park":false,"asist":false},"NachProd":{"total":0,"park":false,"asist":false},"NachKTP":{"total":0,"park":false,"asist":false}},{"date":"2025-06-06","weekday":"Friday","ITV":{"total":3,"park":false,"asist":false},"VZNP":{"total":0,"park":false,"asist":false,"p4":false},"VMZ":{"total":1,"park":true,"asist":false},"NachSIZ":{"total":0,"park":false,"asist":false},"NachProd":{"total":0,"park":false,"asist":false},"NachKTP":{"total":0,"park":false,"asist":false}},{"date":"2025-06-07","weekday":"Saturday","ITV":{"total":3,"park":false,"asist":false},"VZNP":{"total":1,"park":true,"asist":false,"p4":false},"VMZ":{"total":0,"park":false,"asist":false},"NachSIZ":{"total":0,"park":false,"asist":false},"NachProd":{"total":0,"park":false,"asist":false},"NachKTP":{"total":0,"park":false,"asist":false}},{"date":"2025-06-08","weekday":"Sunday","ITV":{"total":4,"park":true,"asist":false},"VZNP":{"total":0,"park":false,"asist":false,"p4":false},"VMZ":{"total":0,"park":false,"asist":false},"NachSIZ":{"total":0,"park":false,"asist":false},"NachProd":{"total":0,"park":false,"asist":false},"NachKTP":{"total":0,"park":false,"asist":false}},{"date":"2025-06-09","weekday":"Monday","ITV":{"total":3,"park":false,"asist":false},"VZNP":{"total":0,"park":false,"asist":false,"p4":false},"VMZ":{"total":1,"park":true,"asist":false},"NachSIZ":{"total":0,"park":false,"asist":false},"NachProd":{"total":0,"park":false,"asist":false},"NachKTP":{"total":0,"park":false,"asist":false}},{"date":"2025-06-10","weekday":"Tuesday","ITV":{"total":3,"park":false,"asist":false},"VZNP":{"total":0,"park":false,"asist":false,"p4":false},"VMZ":{"total":0,"park":false,"asist":false},"NachSIZ":{"total":0,"park":false,"asist":false},"NachProd":{"total":0,"park":false,"asist":false},"NachKTP":{"total":1,"park":true,"asist":false}},{"date":"2025-06-11","weekday":"Wednesday","ITV":{"total":3,"park":false,"asist":false},"VZNP":{"total":0,"park":false,"asist":false,"p4":false},"VMZ":{"total":1,"park":true,"asist":false},"NachSIZ":{"total":0,"park":false,"asist":false},"NachProd":{"total":0,"park":false,"asist":false},"NachKTP":{"total":0,"park":false,"asist":false}},{"date":"2025-06-12","weekday":"Thursday","ITV":{"total":3,"park":false,"asist":false},"VZNP":{"total":1,"park":true,"asist":false,"p4":false},"VMZ":{"total":0,"park":false,"asist":false},"NachSIZ":{"total":0,"park":false,"asist":false},"NachProd":{"total":0,"park":false,"asist":false},"NachKTP":{"total":0,"park":false,"asist":false}},{"date":"2025-06-13","weekday":"Friday","ITV":{"total":3,"park":false,"asist":false},"VZNP":{"total":0,"park":false,"asist":false,"p4":false},"VMZ":{"total":1,"park":true,"asist":false},"NachSIZ":{"total":0,"park":false,"asist":false},"NachProd":{"total":0,"park":false,"asist":false},"NachKTP":{"total":0,"park":false,"asist":false}},{"date":"2025-06-14","weekday":"Saturday","ITV":{"total":3,"park":false,"asist":false},"VZNP":{"total":1,"park":true,"asist":false,"p4":false},"VMZ":{"total":0,"park":false,"asist":false},"NachSIZ":{"total":0,"park":false,"asist":false},"NachProd":{"total":0,"park":false,"asist":false},"NachKTP":{"total":0,"park":false,"asist":false}},{"date":"2025-06-15","weekday":"Sunday","ITV":{"total":4,"park":true,"asist":false},"VZNP":{"total":0,"park":false,"asist":false,"p4":false},"VMZ":{"total":0,"park":false,"asist":false},"NachSIZ":{"total":0,"park":false,"asist":false},"NachProd":{"total":0,"park":false,"asist":false},"NachKTP":{"total":0,"park":false,"asist":false}},{"date":"2025-06-16","weekday":"Monday","ITV":{"total":3,"park":false,"asist":false},"VZNP":{"total":0,"park":false,"asist":false,"p4":false},"VMZ":{"total":1,"park":true,"asist":false},"NachSIZ":{"total":0,"park":false,"asist":false},"NachProd":{"total":0,"park":false,"asist":false},"NachKTP":{"total":0,"park":false,"asist":false}},{"date":"2025-06-17","weekday":"Tuesday","ITV":{"total":3,"park":false,"asist":false},"VZNP":{"total":0,"park":false,"asist":false,"p4":false},"VMZ":{"total":0,"park":false,"asist":false},"NachSIZ":{"total":0,"park":false,"asist":false},"NachProd":{"total":0,"park":false,"asist":false},"NachKTP":{"total":1,"park":true,"asist":false}},{"date":"2025-06-18","weekday":"Wednesday","ITV":{"total":3,"park":false,"asist":false},"VZNP":{"total":0,"park":false,"asist":false,"p4":false},"VMZ":{"total":1,"park":true,"asist":false},"NachSIZ":{"total":0,"park":false,"asist":false},"NachProd":{"total":0,"park":false,"asist":false},"NachKTP":{"total":0,"park":false,"asist":false}},{"date":"2025-06-19","weekday":"Thursday","ITV":{"total":3,"park":false,"asist":false},"VZNP":{"total":1,"park":true,"asist":false,"p4":false},"VMZ":{"total":0,"park":false,"asist":false},"NachSIZ":{"total":0,"park":false,"asist":false},"NachProd":{"total":0,"park":false,"asist":false},"NachKTP":{"total":0,"park":false,"asist":false}},{"date":"2025-06-20","weekday":"Friday","ITV":{"total":3,"park":false,"asist":false},"VZNP":{"total":0,"park":false,"asist":false,"p4":false},"VMZ":{"total":1,"park":true,"asist":false},"NachSIZ":{"total":0,"park":false,"asist":false},"NachProd":{"total":0,"park":false,"asist":false},"NachKTP":{"total":0,"park":false,"asist":false}},{"date":"2025-06-21","weekday":"Saturday","ITV":{"total":3,"park":false,"asist":false},"VZNP":{"total":1,"park":true,"asist":false,"p4":false},"VMZ":{"total":0,"park":false,"asist":false},"NachSIZ":{"total":0,"park":false,"asist":false},"NachProd":{"total":0,"park":false,"asist":false},"NachKTP":{"total":0,"park":false,"asist":false}},{"date":"2025-06-22","weekday":"Sunday","ITV":{"total":4,"park":true,"asist":false},"VZNP":{"total":0,"park":false,"asist":false,"p4":false},"VMZ":{"total":0,"park":false,"asist":false},"NachSIZ":{"total":0,"park":false,"asist":false},"NachProd":{"total":0,"park":false,"asist":false},"NachKTP":{"total":0,"park":false,"asist":false}},{"date":"2025-06-23","weekday":"Monday","ITV":{"total":3,"park":false,"asist":false},"VZNP":{"total":0,"park":false,"asist":false,"p4":false},"VMZ":{"total":1,"park":true,"asist":false},"NachSIZ":{"total":0,"park":false,"asist":false},"NachProd":{"total":0,"park":false,"asist":false},"NachKTP":{"total":0,"park":false,"asist":false}},{"date":"2025-06-24","weekday":"Tuesday","ITV":{"total":3,"park":false,"asist":false},"VZNP":{"total":0,"park":false,"asist":false,"p4":false},"VMZ":{"total":0,"park":false,"asist":false},"NachSIZ":{"total":0,"park":false,"asist":false},"NachProd":{"total":0,"park":false,"asist":false},"NachKTP":{"total":1,"park":true,"asist":false}},{"date":"2025-06-25","weekday":"Wednesday","ITV":{"total":3,"park":false,"asist":false},"VZNP":{"total":0,"park":false,"asist":false,"p4":false},"VMZ":{"total":1,"park":true,"asist":false},"NachSIZ":{"total":0,"park":false,"asist":false},"NachProd":{"total":0,"park":false,"asist":false},"NachKTP":{"total":0,"park":false,"asist":false}},{"date":"2025-06-26","weekday":"Thursday","ITV":{"total":3,"park":false,"asist":false},"VZNP":{"total":1,"park":true,"asist":false,"p4":false},"VMZ":{"total":0,"park":false,"asist":false},"NachSIZ":{"total":0,"park":false,"asist":false},"NachProd":{"total":0,"park":false,"asist":false},"NachKTP":{"total":0,"park":false,"asist":false}},{"date":"2025-06-27","weekday":"Friday","ITV":{"total":3,"park":false,"asist":false},"VZNP":{"total":0,"park":false,"asist":false,"p4":false},"VMZ":{"total":1,"park":true,"asist":false},"NachSIZ":{"total":0,"park":false,"asist":false},"NachProd":{"total":0,"park":false,"asist":false},"NachKTP":{"total":0,"park":false,"asist":false}},{"date":"2025-06-28","weekday":"Saturday","ITV":{"total":3,"park":false,"asist":false},"VZNP":{"total":1,"park":true,"asist":false,"p4":false},"VMZ":{"total":0,"park":false,"asist":false},"NachSIZ":{"total":0,"park":false,"asist":false},"NachProd":{"total":0,"park":false,"asist":false},"NachKTP":{"total":0,"park":false,"asist":false}},{"date":"2025-06-29","weekday":"Sunday","ITV":{"total":4,"park":true,"asist":false},"VZNP":{"total":0,"park":false,"asist":false,"p4":false},"VMZ":{"total":0,"park":false,"asist":false},"NachSIZ":{"total":0,"park":false,"asist":false},"NachProd":{"total":0,"park":false,"asist":false},"NachKTP":{"total":0,"park":false,"asist":false}},{"date":"2025-06-30","weekday":"Monday","ITV":{"total":3,"park":false,"asist":false},"VZNP":{"total":0,"park":false,"asist":false,"p4":false},"VMZ":{"total":1,"park":true,"asist":false},"NachSIZ":{"total":0,"park":false,"asist":false},"NachProd":{"total":0,"park":false,"asist":false},"NachKTP":{"total":0,"park":false,"asist":false}}]
+[
+  {
+    "date": "2025-06-01",
+    "weekday": "Sunday",
+    "ITV": {
+      "total": 4,
+      "park": true,
+      "asist": false
+    },
+    "VZNP": {
+      "total": 0,
+      "park": false,
+      "asist": false,
+      "p4": false
+    },
+    "VMZ": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    },
+    "NachSIZ": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    },
+    "NachProd": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    },
+    "NachKTP": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    }
+  },
+  {
+    "date": "2025-06-02",
+    "weekday": "Monday",
+    "ITV": {
+      "total": 3,
+      "park": false,
+      "asist": false
+    },
+    "VZNP": {
+      "total": 0,
+      "park": false,
+      "asist": false,
+      "p4": false
+    },
+    "VMZ": {
+      "total": 1,
+      "park": true,
+      "asist": false
+    },
+    "NachSIZ": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    },
+    "NachProd": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    },
+    "NachKTP": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    }
+  },
+  {
+    "date": "2025-06-03",
+    "weekday": "Tuesday",
+    "ITV": {
+      "total": 3,
+      "park": false,
+      "asist": false
+    },
+    "VZNP": {
+      "total": 0,
+      "park": false,
+      "asist": false,
+      "p4": false
+    },
+    "VMZ": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    },
+    "NachSIZ": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    },
+    "NachProd": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    },
+    "NachKTP": {
+      "total": 1,
+      "park": true,
+      "asist": false
+    }
+  },
+  {
+    "date": "2025-06-04",
+    "weekday": "Wednesday",
+    "ITV": {
+      "total": 3,
+      "park": false,
+      "asist": false
+    },
+    "VZNP": {
+      "total": 0,
+      "park": false,
+      "asist": false,
+      "p4": false
+    },
+    "VMZ": {
+      "total": 1,
+      "park": true,
+      "asist": false
+    },
+    "NachSIZ": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    },
+    "NachProd": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    },
+    "NachKTP": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    }
+  },
+  {
+    "date": "2025-06-05",
+    "weekday": "Thursday",
+    "ITV": {
+      "total": 3,
+      "park": false,
+      "asist": false
+    },
+    "VZNP": {
+      "total": 1,
+      "park": true,
+      "asist": false,
+      "p4": false
+    },
+    "VMZ": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    },
+    "NachSIZ": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    },
+    "NachProd": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    },
+    "NachKTP": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    }
+  },
+  {
+    "date": "2025-06-06",
+    "weekday": "Friday",
+    "ITV": {
+      "total": 3,
+      "park": false,
+      "asist": false
+    },
+    "VZNP": {
+      "total": 0,
+      "park": false,
+      "asist": false,
+      "p4": false
+    },
+    "VMZ": {
+      "total": 1,
+      "park": true,
+      "asist": false
+    },
+    "NachSIZ": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    },
+    "NachProd": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    },
+    "NachKTP": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    }
+  },
+  {
+    "date": "2025-06-07",
+    "weekday": "Saturday",
+    "ITV": {
+      "total": 3,
+      "park": false,
+      "asist": false
+    },
+    "VZNP": {
+      "total": 1,
+      "park": true,
+      "asist": false,
+      "p4": false
+    },
+    "VMZ": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    },
+    "NachSIZ": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    },
+    "NachProd": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    },
+    "NachKTP": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    }
+  },
+  {
+    "date": "2025-06-08",
+    "weekday": "Sunday",
+    "ITV": {
+      "total": 4,
+      "park": true,
+      "asist": false
+    },
+    "VZNP": {
+      "total": 0,
+      "park": false,
+      "asist": false,
+      "p4": false
+    },
+    "VMZ": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    },
+    "NachSIZ": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    },
+    "NachProd": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    },
+    "NachKTP": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    }
+  },
+  {
+    "date": "2025-06-09",
+    "weekday": "Monday",
+    "ITV": {
+      "total": 3,
+      "park": false,
+      "asist": false
+    },
+    "VZNP": {
+      "total": 0,
+      "park": false,
+      "asist": false,
+      "p4": false
+    },
+    "VMZ": {
+      "total": 1,
+      "park": true,
+      "asist": false
+    },
+    "NachSIZ": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    },
+    "NachProd": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    },
+    "NachKTP": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    }
+  },
+  {
+    "date": "2025-06-10",
+    "weekday": "Tuesday",
+    "ITV": {
+      "total": 3,
+      "park": false,
+      "asist": false
+    },
+    "VZNP": {
+      "total": 0,
+      "park": false,
+      "asist": false,
+      "p4": false
+    },
+    "VMZ": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    },
+    "NachSIZ": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    },
+    "NachProd": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    },
+    "NachKTP": {
+      "total": 1,
+      "park": true,
+      "asist": false
+    }
+  },
+  {
+    "date": "2025-06-11",
+    "weekday": "Wednesday",
+    "ITV": {
+      "total": 3,
+      "park": false,
+      "asist": false
+    },
+    "VZNP": {
+      "total": 0,
+      "park": false,
+      "asist": false,
+      "p4": false
+    },
+    "VMZ": {
+      "total": 1,
+      "park": true,
+      "asist": false
+    },
+    "NachSIZ": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    },
+    "NachProd": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    },
+    "NachKTP": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    }
+  },
+  {
+    "date": "2025-06-12",
+    "weekday": "Thursday",
+    "ITV": {
+      "total": 3,
+      "park": false,
+      "asist": false
+    },
+    "VZNP": {
+      "total": 1,
+      "park": true,
+      "asist": false,
+      "p4": false
+    },
+    "VMZ": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    },
+    "NachSIZ": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    },
+    "NachProd": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    },
+    "NachKTP": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    }
+  },
+  {
+    "date": "2025-06-13",
+    "weekday": "Friday",
+    "ITV": {
+      "total": 3,
+      "park": false,
+      "asist": false
+    },
+    "VZNP": {
+      "total": 0,
+      "park": false,
+      "asist": false,
+      "p4": false
+    },
+    "VMZ": {
+      "total": 1,
+      "park": true,
+      "asist": false
+    },
+    "NachSIZ": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    },
+    "NachProd": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    },
+    "NachKTP": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    }
+  },
+  {
+    "date": "2025-06-14",
+    "weekday": "Saturday",
+    "ITV": {
+      "total": 3,
+      "park": false,
+      "asist": false
+    },
+    "VZNP": {
+      "total": 1,
+      "park": true,
+      "asist": false,
+      "p4": false
+    },
+    "VMZ": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    },
+    "NachSIZ": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    },
+    "NachProd": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    },
+    "NachKTP": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    }
+  },
+  {
+    "date": "2025-06-15",
+    "weekday": "Sunday",
+    "ITV": {
+      "total": 4,
+      "park": true,
+      "asist": false
+    },
+    "VZNP": {
+      "total": 0,
+      "park": false,
+      "asist": false,
+      "p4": false
+    },
+    "VMZ": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    },
+    "NachSIZ": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    },
+    "NachProd": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    },
+    "NachKTP": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    }
+  },
+  {
+    "date": "2025-06-16",
+    "weekday": "Monday",
+    "ITV": {
+      "total": 3,
+      "park": false,
+      "asist": false
+    },
+    "VZNP": {
+      "total": 0,
+      "park": false,
+      "asist": false,
+      "p4": false
+    },
+    "VMZ": {
+      "total": 1,
+      "park": true,
+      "asist": false
+    },
+    "NachSIZ": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    },
+    "NachProd": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    },
+    "NachKTP": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    }
+  },
+  {
+    "date": "2025-06-17",
+    "weekday": "Tuesday",
+    "ITV": {
+      "total": 3,
+      "park": false,
+      "asist": false
+    },
+    "VZNP": {
+      "total": 0,
+      "park": false,
+      "asist": false,
+      "p4": false
+    },
+    "VMZ": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    },
+    "NachSIZ": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    },
+    "NachProd": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    },
+    "NachKTP": {
+      "total": 1,
+      "park": true,
+      "asist": false
+    }
+  },
+  {
+    "date": "2025-06-18",
+    "weekday": "Wednesday",
+    "ITV": {
+      "total": 3,
+      "park": false,
+      "asist": false
+    },
+    "VZNP": {
+      "total": 0,
+      "park": false,
+      "asist": false,
+      "p4": false
+    },
+    "VMZ": {
+      "total": 1,
+      "park": true,
+      "asist": false
+    },
+    "NachSIZ": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    },
+    "NachProd": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    },
+    "NachKTP": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    }
+  },
+  {
+    "date": "2025-06-19",
+    "weekday": "Thursday",
+    "ITV": {
+      "total": 3,
+      "park": false,
+      "asist": false
+    },
+    "VZNP": {
+      "total": 1,
+      "park": true,
+      "asist": false,
+      "p4": false
+    },
+    "VMZ": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    },
+    "NachSIZ": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    },
+    "NachProd": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    },
+    "NachKTP": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    }
+  },
+  {
+    "date": "2025-06-20",
+    "weekday": "Friday",
+    "ITV": {
+      "total": 3,
+      "park": false,
+      "asist": false
+    },
+    "VZNP": {
+      "total": 0,
+      "park": false,
+      "asist": false,
+      "p4": false
+    },
+    "VMZ": {
+      "total": 1,
+      "park": true,
+      "asist": false
+    },
+    "NachSIZ": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    },
+    "NachProd": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    },
+    "NachKTP": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    }
+  },
+  {
+    "date": "2025-06-21",
+    "weekday": "Saturday",
+    "ITV": {
+      "total": 3,
+      "park": false,
+      "asist": false
+    },
+    "VZNP": {
+      "total": 1,
+      "park": true,
+      "asist": false,
+      "p4": false
+    },
+    "VMZ": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    },
+    "NachSIZ": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    },
+    "NachProd": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    },
+    "NachKTP": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    }
+  },
+  {
+    "date": "2025-06-22",
+    "weekday": "Sunday",
+    "ITV": {
+      "total": 4,
+      "park": true,
+      "asist": false
+    },
+    "VZNP": {
+      "total": 0,
+      "park": false,
+      "asist": false,
+      "p4": false
+    },
+    "VMZ": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    },
+    "NachSIZ": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    },
+    "NachProd": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    },
+    "NachKTP": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    }
+  },
+  {
+    "date": "2025-06-23",
+    "weekday": "Monday",
+    "ITV": {
+      "total": 3,
+      "park": false,
+      "asist": false
+    },
+    "VZNP": {
+      "total": 0,
+      "park": false,
+      "asist": false,
+      "p4": false
+    },
+    "VMZ": {
+      "total": 1,
+      "park": true,
+      "asist": false
+    },
+    "NachSIZ": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    },
+    "NachProd": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    },
+    "NachKTP": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    }
+  },
+  {
+    "date": "2025-06-24",
+    "weekday": "Tuesday",
+    "ITV": {
+      "total": 3,
+      "park": false,
+      "asist": false
+    },
+    "VZNP": {
+      "total": 0,
+      "park": false,
+      "asist": false,
+      "p4": false
+    },
+    "VMZ": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    },
+    "NachSIZ": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    },
+    "NachProd": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    },
+    "NachKTP": {
+      "total": 1,
+      "park": true,
+      "asist": false
+    }
+  },
+  {
+    "date": "2025-06-25",
+    "weekday": "Wednesday",
+    "ITV": {
+      "total": 3,
+      "park": false,
+      "asist": false
+    },
+    "VZNP": {
+      "total": 0,
+      "park": false,
+      "asist": false,
+      "p4": false
+    },
+    "VMZ": {
+      "total": 1,
+      "park": true,
+      "asist": false
+    },
+    "NachSIZ": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    },
+    "NachProd": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    },
+    "NachKTP": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    }
+  },
+  {
+    "date": "2025-06-26",
+    "weekday": "Thursday",
+    "ITV": {
+      "total": 3,
+      "park": false,
+      "asist": false
+    },
+    "VZNP": {
+      "total": 1,
+      "park": true,
+      "asist": false,
+      "p4": false
+    },
+    "VMZ": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    },
+    "NachSIZ": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    },
+    "NachProd": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    },
+    "NachKTP": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    }
+  },
+  {
+    "date": "2025-06-27",
+    "weekday": "Friday",
+    "ITV": {
+      "total": 3,
+      "park": false,
+      "asist": false
+    },
+    "VZNP": {
+      "total": 0,
+      "park": false,
+      "asist": false,
+      "p4": false
+    },
+    "VMZ": {
+      "total": 1,
+      "park": true,
+      "asist": false
+    },
+    "NachSIZ": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    },
+    "NachProd": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    },
+    "NachKTP": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    }
+  },
+  {
+    "date": "2025-06-28",
+    "weekday": "Saturday",
+    "ITV": {
+      "total": 3,
+      "park": false,
+      "asist": false
+    },
+    "VZNP": {
+      "total": 1,
+      "park": true,
+      "asist": false,
+      "p4": false
+    },
+    "VMZ": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    },
+    "NachSIZ": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    },
+    "NachProd": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    },
+    "NachKTP": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    }
+  },
+  {
+    "date": "2025-06-29",
+    "weekday": "Sunday",
+    "ITV": {
+      "total": 4,
+      "park": true,
+      "asist": false
+    },
+    "VZNP": {
+      "total": 0,
+      "park": false,
+      "asist": false,
+      "p4": false
+    },
+    "VMZ": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    },
+    "NachSIZ": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    },
+    "NachProd": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    },
+    "NachKTP": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    }
+  },
+  {
+    "date": "2025-06-30",
+    "weekday": "Monday",
+    "ITV": {
+      "total": 3,
+      "park": false,
+      "asist": false
+    },
+    "VZNP": {
+      "total": 0,
+      "park": false,
+      "asist": false,
+      "p4": false
+    },
+    "VMZ": {
+      "total": 1,
+      "park": true,
+      "asist": false
+    },
+    "NachSIZ": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    },
+    "NachProd": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    },
+    "NachKTP": {
+      "total": 0,
+      "park": false,
+      "asist": false
+    }
+  }
+]
