@@ -1,5 +1,28 @@
 import fs from 'fs';
+import XLSX from 'xlsx';
+import path from 'path';
 
+/**
+ * Зчитує дані з Excel файлу
+ * @param {string} filePath Шлях до файлу
+ * @param {string} sheetName Назва аркуша
+ * @returns {Array<Object>} Масив об'єктів (рядків)
+ */
+export function readExcelFile(filePath, sheetName) {
+    try {
+        const workbook = XLSX.readFile(filePath);
+        const worksheet = workbook.Sheets[sheetName];
+        if (!worksheet) {
+            console.error(`Помилка: Аркуш "${sheetName}" не знайдено у файлі ${filePath}`);
+            return [];
+        }
+        // Перетворюємо аркуш у масив JSON об'єктів
+        return XLSX.utils.sheet_to_json(worksheet);
+    } catch (error) {
+        console.error(`Помилка при читанні файлу ${filePath}:`, error.message);
+        return [];
+    }
+}
 
 export function getFileData(filePath) {
   return new Promise((resolve, reject) => {
