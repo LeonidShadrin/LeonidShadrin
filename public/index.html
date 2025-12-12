@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8" />
+    <title>Генератор наказів</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <aside class="sidebar">
+        <h1>Дії</h1>
+        <button data-action="nakaz">Наказ</button>
+        <button data-action="signers">Підписанти</button>
+      </aside>
+      <section class="workspace">
+        <div class="status" id="status">Очікує натискання кнопки.</div>
+        <textarea id="output" spellcheck="false" readonly placeholder="Тут з'явиться результат..."></textarea>
+      </section>
+    </main>
+
+    <script type="module" src="../nakaz/index.js"></script>
+    <script type="module" src="../signers/index.js"></script>
+    <script src="./temp.js"></script>
+    <script type="module">
+      tempFunction();
+      // runNakaz();
+      const output = document.getElementById('output');
+      const status = document.getElementById('status');
+      const buttons = document.querySelectorAll('[data-action]');
+
+      const actions = {
+        nakaz: runNakaz,
+        signers: runSigners
+      }
+
+      function setStatus(text, isError = false) {
+        status.textContent = text;
+        status.dataset.state = isError ? 'error' : 'ok';
+      }
+
+      async function runAction(action) {
+        setStatus('Зачекайте, дані обробляються...');
+        output.value = '';
+
+        try {
+          const response =  actions[action]();  //await fetch(`/api/${action}`, { method: 'POST' });
+          if (!response.ok) {
+            throw new Error('Помилка під час обробки запиту');
+          }
+          const payload = await response.json();
+          output.value = payload.content || '';
+          setStatus('Готово! Дані оновлено.');
+        } catch (error) {
+          console.error(error);
+          setStatus('Сталася помилка. Перевірте лог сервера.', true);
+        }
+      }
+
+      buttons.forEach((button) => {
+        button.addEventListener('click', (event) => {
+          const { action } = event.currentTarget.dataset;
+          runAction(action);
+        });
+      });
+    </script>
+  </body>
+</html>
+
