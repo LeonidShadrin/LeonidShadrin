@@ -79,8 +79,8 @@ function processTemplate(template, parsedData, templatesList, kursantsTemplatesL
 
         return output.replace(placeholder, 
           (mapping[item.id]?.kursant ? 'курсант навчального взводу навчальної роти військової частини А4631 ' : '')
-          // + `${full.split(item.surname)[0]} ${item.surname.toUpperCase()} ${item.initials[0]}.${item.initials[1]}.`);SS
-          + `${full.split(item.surname)[0]} ${item.surname.toUpperCase()} ${getRandomName(item.initials[0])} ${getRandomFathersName(item.initials[1])}`);
+          + `${full.split(item.surname)[0]} ${item.surname.toUpperCase()} ${item.initials[0]}.${item.initials[1]}.`);
+          // + `${full.split(item.surname)[0]} ${item.surname.toUpperCase()} ${getRandomName(item.initials[0])} ${getRandomFathersName(item.initials[1])}`);
       }
     }
   }, template);
